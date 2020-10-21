@@ -110,7 +110,6 @@ defmodule DesafioDc.Parser do
          json_data <- transform(payload),
          :ok <- post(json_data),
          {:ok, d} <- OrderModel.create(json_data) do
-      IO.inspect d
       {:ok, json_data}
     end
   end
